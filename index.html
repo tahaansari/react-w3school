@@ -12,16 +12,36 @@
     </style>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
     <div id="app"></div>
-    <script>
+    <script type="text/babel">
+        function App(){
+            return  <div class="wrapper">
+                        <Header/>
+                        <Body/>
+                        <Footer/>
+                    </div>
+        }
         function Header(){
-            return "Hello World";
+            return  <div>
+                        <h1>Header</h1>
+                    </div>
+        }
+        function Body(){
+            return  <div>
+                        <h1>Body</h1>
+                    </div>
+        }
+        function Footer(){
+            return  <div>
+                        <h1>Footer</h1>
+                    </div>
         }
         var app = document.getElementById('app');
         const root = ReactDOM.createRoot(app);
-        root.render(<Header/>); 
+        root.render(<App/>); 
     </script>
 </body>
 </html>
