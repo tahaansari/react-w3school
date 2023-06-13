@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Todos from "../components/Todos";
 export default function Home(){
     
@@ -10,6 +10,13 @@ export default function Home(){
     function increment(){
         setCounter((c => c+1))
     }
+
+    useEffect(()=>{
+        setTimeout(() => {
+            console.log('use effect called')
+            setCounter((c => c+1))
+        }, 1000);
+    })
 
     return(
         <div>
