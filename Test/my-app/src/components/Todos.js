@@ -1,4 +1,7 @@
-export default function Todos({todos}){
+import { memo } from "react"
+
+function Todos({todos}){
+    console.log('todo component re-rendered')
     return(
         <>
             <ul>
@@ -9,3 +12,5 @@ export default function Todos({todos}){
         </>
     )
 }
+
+export default memo(Todos);
