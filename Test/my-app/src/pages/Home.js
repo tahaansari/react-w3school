@@ -1,5 +1,9 @@
-import {useState} from "react";
+import {createContext, useState} from "react";
 import Todos from "../components/Todos";
+import Component1 from "../components/Component1";
+
+export const CounterContext = createContext();
+
 export default function Home(){
     
     console.log('home component re-rendered')
@@ -17,6 +21,10 @@ export default function Home(){
             counter {counter}
             <br />
             <button onClick={increment}>Increment</button>
+            <CounterContext.Provider value={counter}>
+                <Component1/>
+            </CounterContext.Provider>
+
         </div>
     )
 }
