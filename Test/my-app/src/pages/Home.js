@@ -1,4 +1,4 @@
-import {createContext, useState} from "react";
+import {useState, useEffect, createContext} from "react";
 import Todos from "../components/Todos";
 import Component1 from "../components/Component1";
 
@@ -14,6 +14,13 @@ export default function Home(){
     function increment(){
         setCounter((c => c+1))
     }
+
+    useEffect(()=>{
+        setTimeout(() => {
+            console.log('use effect called')
+            setCounter((c => c+1))
+        }, 1000);
+    })
 
     return(
         <div>
