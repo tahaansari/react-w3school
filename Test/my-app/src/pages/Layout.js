@@ -16,6 +16,9 @@ export default function Layout() {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
+            <li>
+              <Link to="/usecallback">UseCallback</Link>
+            </li>
           </ul>
         </nav>
       </header>
