@@ -1,15 +1,21 @@
-export default function UseCallback() {
+export default function UseCallback({todos,addTodo}) {
+  const style = {
+    backgroundColor: "blue",
+    color:"white",
+    padding:"1rem"
+  }
   return (
-    <div>
+    <div style={style}>
       My Todos
       <ul>
-        <li>Todo 1</li>
-        <li>Todo 2</li>
-        <li>Todo 3</li>
-        <li>Todo 4</li>
-        <li>Todo 5</li>
+        {
+          todos.length ?  todos.map((todo,id)=>{
+              return <li key={id}>{todo}</li>
+            })
+           : "No Todo"
+        }
       </ul>
-      <button>Button</button>
+      <button onClick={addTodo}>Button</button>
     </div>
   )
 }
