@@ -11,11 +11,13 @@ import { useState } from 'react';
 
 function App() {
 
+
+  console.log('App.js re-rendered')
+
   const [todos,setTodos] = useState([]); 
 
   const addTodo = ()=>{
-    console.log('add todo called')
-    setTodos((t)=>[...[t],"Todo no 1"])
+    setTodos((t)=>[...t,"Todo no 1"])
   }
 
   return (
@@ -26,7 +28,7 @@ function App() {
             <Route path='home' element={<Home/>}/>
             <Route path="blogs" element={<Blogs/>}/>
             <Route path='contact' element={<Contact/>}/>
-            <Route index path='UseCallback' element={<UseCallback todos={todos} addTodo={addTodo} />}/>
+            <Route index path='UseCallback' element={<UseCallback/>}/>
             <Route path='*' element={<NoPage/>}/>
           </Route>d
         </Routes>

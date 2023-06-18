@@ -1,4 +1,9 @@
-export default function UseCallback({todos,addTodo}) {
+import { memo, useCallback } from "react";
+
+function UseCallback({todos,addTodo}) {
+
+  console.log('UseCallback.js re-rendered');
+
   const style = {
     backgroundColor: "blue",
     color:"white",
@@ -19,3 +24,5 @@ export default function UseCallback({todos,addTodo}) {
     </div>
   )
 }
+
+export default memo(UseCallback);
