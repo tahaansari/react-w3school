@@ -1,12 +1,14 @@
 import { Outlet, Link } from "react-router-dom"
 
 export default function Layout() {
+  const navStyle = {
+    display:"flex",
+  }
   return (
     <>
       <header>
-        <h2>Header</h2>
         <nav>
-          <ul>
+          <ul style={navStyle}>
             <li>
               <Link to="/">Home</Link>
             </li>

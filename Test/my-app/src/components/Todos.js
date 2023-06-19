@@ -1,6 +1,6 @@
 import { memo } from "react"
 
-function Todos({todos}){
+function Todos({todos,addTodo}){
     console.log('todo component re-rendered')
     return(
         <>
@@ -9,6 +9,7 @@ function Todos({todos}){
                      return <li key={index}>{todo}</li>
                 })}
             </ul>
+            <button onClick={addTodo}>Add Todo</button>
         </>
     )
 }
