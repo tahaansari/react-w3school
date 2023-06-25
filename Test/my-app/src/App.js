@@ -1,26 +1,19 @@
 import './App.css';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Layout from "./pages/Layout"
-import Home from "./pages/Home"
-import Blogs from "./pages/Blogs"
-import Contact from "./pages/Contact"
-import NoPage from "./pages/NoPage"
-import About from './pages/About';
-import { useState } from 'react';
-
+// import {BrowserRouter, Routes, Route} from "react-router-dom";
+// import Layout from "./pages/Layout"
+// import Blogs from "./pages/Blogs"
+// import Contact from "./pages/Contact"
+// import NoPage from "./pages/NoPage"
+// import { useState } from 'react';
+import Home from './pages/Home';
 
 function App() {
   
   console.log('App.js re-rendered')
 
-  const [todos,setTodos] = useState([]); 
-
-  // const addTodo = ()=>{
-  //   setTodos((t)=>[...t,"Todo no 1"])
-  // }
-
   return (
     <div className="App">
+      <Home/>
       {/* <BrowserRouter>    
         <Routes>
           <Route path='/' element={<Layout/>}>
@@ -31,7 +24,6 @@ function App() {
           </Route>d
         </Routes>
       </BrowserRouter> */}
-      <About/>
     </div>
   );
 }

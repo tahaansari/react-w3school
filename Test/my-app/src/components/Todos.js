@@ -1,7 +1,6 @@
-import { memo } from "react"
-
+import { memo } from "react";
 function Todos({todos,addTodo}){
-    console.log('todo component re-rendered')
+    console.log("Todo.JS re-render");
     return(
         <>
             <ul>
