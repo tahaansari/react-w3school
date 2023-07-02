@@ -6,6 +6,7 @@ import './App.css';
 // import NoPage from "./pages/NoPage"
 // import { useState } from 'react';
 import Home from './pages/Home';
+import HookUseReducerCheckbox from './pages/HookUseReducerCheckbox'
 
 function App() {
   
@@ -13,7 +14,9 @@ function App() {
 
   return (
     <div className="App">
-      <Home/>
+      {/* <Home/> */}
+      {/* <HookUseReducerCheckbox/> */}
+      {}
       {/* <BrowserRouter>    
         <Routes>
           <Route path='/' element={<Layout/>}>
