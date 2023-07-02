@@ -8,6 +8,7 @@ import './App.css';
 import Home from './pages/Home';
 import HookUseStateCounter from './pages/HookUseStateCounter';
 import HookUseReducerCounter from './pages/HookUseReducerCounter'
+import HookUseReducerTodos from './pages/HookUseReducerTodos';
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
     <div className="App">
       {/* <Home/> */}
       {/* <HookUseStateCounter/> */}
-      <HookUseReducerCounter/>
+      {/* <HookUseReducerCounter/> */}
+      <HookUseReducerTodos/>
       {/* <BrowserRouter>    
         <Routes>
           <Route path='/' element={<Layout/>}>
