@@ -5,19 +5,18 @@ import { useReducer, useState } from "react";
 
 function HookUseReducerTodos(){
 
-    const initialTodos =  { todos: [] }
-
-    const reducer = (state,action) =>{
-        switch(action.type){
-            case "addTodo":
-                return (todo)=>{ [...todo,action.payload.task] }
-        }
-        
-    }
-
     const [task,setTask] = useState('')
 
-    const [state,dispatch] = useReducer(reducer,initialTodos);
+    const [todos,dispatch] = useReducer((todos,action) =>{
+        
+        switch(action.type){
+            case "addTodo":
+                return (todos)=>{[...todos,action.payload],setTask("")}; 
+            default:
+                break;
+        }
+        
+    },[]);
 
     const addTodo = (task) => {
         dispatch({type:"addTodo",payload:task})
