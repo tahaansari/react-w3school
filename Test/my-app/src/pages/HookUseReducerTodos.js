@@ -14,6 +14,8 @@ function HookUseReducerTodos(){
                 return todos.map((todo)=>{
                         if(todo.id == action.payload.id){
                             return [...todos, todo.completed = !todo.completed]
+                        }else{
+                            return todos;
                         }
                     })
             default:
