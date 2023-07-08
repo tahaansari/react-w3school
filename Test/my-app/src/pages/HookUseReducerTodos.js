@@ -11,16 +11,15 @@ function HookUseReducerTodos(){
             case "addTodo":
                 return [...todos, {id:Date.now(), task: action.payload.task, completed:true }]
             case "updateTodo":
-                return todos.map((todo)=>{
-                        if(todo.id == action.payload.id){
-                            return [...todos, todo.completed = !todo.completed]
-                        }else{
-                            return todos;
-                        }
-                    })
+                return  todos.map((todo)=>{
+                            if(todo.id == action.payload.id){
+                                return {...todo, completed:!todo.completed}
+                            }
+                            return todo
+                        })
             default:
-                break
-        }
+                return todos
+        } 
     },[]);
 
     return(
@@ -30,11 +29,14 @@ function HookUseReducerTodos(){
             <ul>
                 {todos.map((todo)=>{
                     return (
-                        <li key={todo.id} style={{color: !todo.completed ? "red" : "green"}} >
-                            {todo.task}
-                            <button onClick={()=>{dispatch({ type:"updateTodo",payload:{id:todo.id} })}}>Toggle</button>
-                            <button>Delete</button>
-                        </li>
+                        <div key={todo.id}>
+                            <li  style={{color: !todo.completed ? "red" : "green"}}>
+                                {todo.task}
+                                <button onClick={()=>{dispatch({ type:"updateTodo",payload:{id:todo.id} })}}>Toggle</button>
+                                <button>Delete</button>
+                            </li>
+                        </div>
+                        
                     )
                 })}
             </ul>
