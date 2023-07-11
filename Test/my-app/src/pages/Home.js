@@ -3,29 +3,27 @@ export default function Home() {
     <div>
       <h1>Home</h1>
     </div>
-  )
+  );
 }
 
 // import {useCallback, useState} from "react";
 // import {useEffect, useRef} from "react";
 // import Todos from "../components/Todos";
 
-
 // export default function Home(){
 
 //     console.log("Home.JS re-render");
-    
-//     const [todos,setTodos] = useState(['todo1','todo2','todo3']); 
+
+//     const [todos,setTodos] = useState(['todo1','todo2','todo3']);
 
 //     const addTodo =  useCallback(()=>{
 //         setTodos((t)=>[...t,"Todo no 1"])
-//     },[todos]) 
-
+//     },[todos])
 
 //     // const [val,setVal] = useState('');
-    
+
 //     // const count = useRef(0);
-    
+
 //     function increment(){
 //         setCounter((c => c+1))
 //     }

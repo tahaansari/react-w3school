@@ -1,13 +1,14 @@
-import './App.css';
+import "./App.css";
 // import MyRouter from './MyRouter';
 // import MyUseState from './concepts/useState/MyUseState';
 // import MyUseReducer from './concepts/useReducer/MyUseReducer';
 // import MyUseContext from "./concepts/useContext/MyUseContext"
 // import MyUseEffect from "./concepts/UseEffect/MyUseEffect"
-import MyUseRef from './concepts/useRef/MyUseRef';
+// import MyUseRef from './concepts/useRef/MyUseRef';
+import MyMemo from "./concepts/memo/MyMemo";
 
 function App() {
-  console.log('App.js re-rendered')
+  console.log("App.JS rendered");
   return (
     <div>
       {/* <h1>App.JS</h1> */}
@@ -16,7 +17,8 @@ function App() {
       {/* <MyUseReducer/> */}
       {/* <MyUseContext/> */}
       {/* <MyUseEffect/> */}
-      <MyUseRef/>
+      {/* <MyUseRef/> */}
+      <MyMemo />
     </div>
   );
 }
