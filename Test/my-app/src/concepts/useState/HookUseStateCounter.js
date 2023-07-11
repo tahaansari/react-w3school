@@ -1,9 +1,6 @@
 import { useState } from "react";
-
 function HookUseStateCounter(){
-    
     const [counter,setCounter] = useState(0);
-
     const updateCounter = (option) => {
         console.log("please update the counter");
         switch(option){
@@ -17,14 +14,11 @@ function HookUseStateCounter(){
                 break;
         }
     }
-
     return(
         <>
-        <div style={{fontSize:"20px"}}>
-            <button style={{padding:"1rem"}} onClick={()=>{updateCounter("minus")}}>-</button>
-             {counter}
-            <button style={{padding:"1rem"}} onClick={()=>{updateCounter("plus")}}>+</button>
-        </div>
+            <button onClick={()=>{updateCounter("minus")}}>-</button>
+                {counter}
+            <button onClick={()=>{updateCounter("plus")}}>+</button>
         </>
     )
 }
