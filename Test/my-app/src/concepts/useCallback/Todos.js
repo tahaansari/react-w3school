@@ -1,6 +1,6 @@
 import { memo } from "react";
-function MyUseCallback({ todos, addTodo }) {
-  console.log("MyUseCallback.JS render");
+function Todos({ todos, addTodo }) {
+  console.log("Todos.JS render");
   return (
     <>
       <ul>
@@ -13,4 +13,4 @@ function MyUseCallback({ todos, addTodo }) {
   );
 }
 
-export default memo(MyUseCallback);
+export default memo(Todos);

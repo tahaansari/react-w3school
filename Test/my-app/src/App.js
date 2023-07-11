@@ -5,7 +5,8 @@ import "./App.css";
 // import MyUseContext from "./concepts/useContext/MyUseContext"
 // import MyUseEffect from "./concepts/UseEffect/MyUseEffect"
 // import MyUseRef from './concepts/useRef/MyUseRef';
-import MyMemo from "./concepts/memo/MyMemo";
+// import MyMemo from "./concepts/memo/MyMemo";
+import MyUseCallback from "./concepts/useCallback/MyUseCallback";
 
 function App() {
   console.log("App.JS rendered");
@@ -18,7 +19,8 @@ function App() {
       {/* <MyUseContext/> */}
       {/* <MyUseEffect/> */}
       {/* <MyUseRef/> */}
-      <MyMemo />
+      {/* <MyMemo /> */}
+      <MyUseCallback />
     </div>
   );
 }

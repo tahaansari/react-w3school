@@ -16,10 +16,6 @@ export default function Home() {
 
 //     const [todos,setTodos] = useState(['todo1','todo2','todo3']);
 
-//     const addTodo =  useCallback(()=>{
-//         setTodos((t)=>[...t,"Todo no 1"])
-//     },[todos])
-
 //     // const [val,setVal] = useState('');
 
 //     // const count = useRef(0);
