@@ -3,16 +3,20 @@ import './App.css';
 // import MyUseState from './concepts/useState/MyUseState';
 // import MyUseReducer from './concepts/useReducer/MyUseReducer';
 // import MyUseContext from "./concepts/useContext/MyUseContext"
+// import MyUseEffect from "./concepts/UseEffect/MyUseEffect"
+import MyUseRef from './concepts/useRef/MyUseRef';
 
 function App() {
   console.log('App.js re-rendered')
   return (
     <div>
-      <h1>App.JS</h1>
+      {/* <h1>App.JS</h1> */}
       {/* <MyRouter/> */}
       {/* <MyUseState/> */}
       {/* <MyUseReducer/> */}
       {/* <MyUseContext/> */}
+      {/* <MyUseEffect/> */}
+      <MyUseRef/>
     </div>
   );
 }
