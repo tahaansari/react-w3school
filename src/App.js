@@ -7,7 +7,8 @@ import "./App.css";
 // import MyUseRef from './concepts/useRef/MyUseRef';
 // import MyMemo from "./concepts/memo/MyMemo";
 // import MyUseCallback from "./concepts/useCallback/MyUseCallback";
-import MyUseMemo from "./concepts/useMemo/MyUseMemo";
+// import MyUseMemo from "./concepts/useMemo/MyUseMemo";
+import MyUseFetch from "./concepts/useFetch/MyUseFetch";
 
 function App() {
   console.log("App.JS rendered");
@@ -22,7 +23,8 @@ function App() {
       {/* <MyUseRef/> */}
       {/* <MyMemo /> */}
       {/* <MyUseCallback /> */}
-      <MyUseMemo></MyUseMemo>
+      {/* <MyUseMemo></MyUseMemo> */}
+      <MyUseFetch></MyUseFetch>
     </div>
   );
 }
